@@ -18,12 +18,14 @@ nav,
 }
 
 .Cards_area .card-title {
+    /* Change to percentages? */
     font-size: 0.9rem;
     font-weight: bold;
 }
 
 .Cards_area .card-text {
-    font-size: 1.8rem;
+    /* Change to percentages? */
+    font-size: 1.8rem; 
     color: #555;
 }
 
