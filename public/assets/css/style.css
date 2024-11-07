@@ -121,6 +121,7 @@ nav,
 
     /* Lower Sidebar */
     #low_sidebar {
+        /* attempted mimicing the sepration line, as per the figma examples. So far not working well */
         border-top: white 2px solid;
     }
 }
