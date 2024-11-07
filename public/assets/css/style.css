@@ -1,0 +1,124 @@
+/* -------------------------------- Global Styles -------------------------------- */
+nav,
+#Sidebar {
+    display: none;
+}
+
+#main_content_area {
+    background-color: #f7f8fc;
+}
+
+/* -------------------------------- Cards Styles -------------------------------- */
+#Cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.Cards_area .card-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.Cards_area .card-text {
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.Cards_area .card {
+    transition: color 0.3s ease;
+}
+
+.Cards_area .card:hover .card-title,
+.Cards_area .card:hover .card-text {
+    color: #007bff;
+}
+
+.buttom_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    justify-content: center;
+}
+
+/* -------------------------------- Chart Styles -------------------------------- */
+.chart-container {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.custom-padding {
+    padding: 20px;
+}
+
+#graph {
+    display: none;
+}
+
+/* -------------------------------- Tickets Styles -------------------------------- */
+#bottom_cards {
+    gap: 6%;
+    padding: 5%;
+}
+
+#bottom_tickets {
+    gap: 12%;
+}
+
+.list-group-item {
+    font-weight: bold;
+}
+
+/* -------------------------------- Media Query -------------------------------- */
+@media only screen and (min-width: 650px) {
+    /* Sidebar */
+    #Sidebar {
+        display: flex;
+        height: 120vh;
+        background-color: #363740;
+    }
+
+    /* top Nav */
+    #username{
+        font-size: small;
+        color: #363740;
+    }
+
+    #Top_right_Nav{
+        /* This gap is shrinking the svg, will need to figure out away around this, or fix the svg search icon size */
+        /* gap: 1.5%; */
+    }
+
+    /* Cards */
+    #Cards {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 2%;
+    }
+
+    /* Graph */
+    #graph {
+        height: 40%;
+        display: flex;
+    }
+
+    /* Tickets */
+    #bottom_cards {
+        gap: 0%;
+        padding: 0%;
+    }
+
+    #bottom_tickets {
+        padding: 2%;
+        gap: 0;
+    }
+
+    /* Lower Sidebar */
+    #low_sidebar {
+        border-top: white 2px solid;
+    }
+}
