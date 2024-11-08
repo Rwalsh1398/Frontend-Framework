@@ -105,9 +105,14 @@
                
               <a href="#" id="Top_right_Nav" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                 <!-- Search Icon with margin to the right -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search me-2" viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search me-2" viewBox="0 0 16 16" onclick="toggleSearch()">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                 </svg>
+            
+                <!-- Search Form, initially hidden -->
+                <form id="searchForm" class="form-inline" style="display: none;">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
                 
                 <!-- Username with margin to the right -->
                 <span id="username" class="d-none d-sm-inline mx-1">Jones Ferdinand</span>
@@ -188,11 +193,27 @@
   </div>
   <!-- End of Sidebar & Main Content - currently a grouped within the same div, as per the bootsrap code used. -->
 
-  <!-- Bootstrap and custom JavaScript -->
+  <!--------------------------------------------------- Bootstrap and custom JavaScript--------------------------------------------------------- -->
+  <!-- Note the script inputs only are functional when added directly into the html -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/code.js"></script>
-  
+
+
+  <!-- Searchbar Java, Also only works when input directly into html - I cannot figure out why -->
+  <!-- <script src="../public/assets/js/chart.js" defer></script> this was an attempt to fix the issue. didnt work --> 
+
+
+  <script>
+    function toggleSearch() {
+        const searchForm = document.getElementById("searchForm");
+        if (searchForm.style.display === "none" || searchForm.style.display === "") {
+            searchForm.style.display = "block";
+        } else {
+            searchForm.style.display = "none";
+        }
+    }
+</script>
   <!-- Only Currently Works when directly inserted directly into the index page, at the very bottom, will work on this as it should be functional via js file -->
   <script> 
     const ctx = document.getElementById("chart").getContext('2d');

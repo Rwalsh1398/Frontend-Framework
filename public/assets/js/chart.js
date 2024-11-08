@@ -20,3 +20,13 @@ const myChart = new Chart(ctx, {
       }
     },
   });
+
+  // search
+  function toggleSearch() {
+    const searchForm = document.getElementById("searchForm");
+    if (searchForm.style.display === "none" || searchForm.style.display === "") {
+        searchForm.style.display = "block";
+    } else {
+        searchForm.style.display = "none";
+    }
+}
