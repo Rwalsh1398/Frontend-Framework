@@ -6,7 +6,7 @@
     "start": "lite-server --baseDir=\"public\""
   },
   "keywords": [],
-  "private": true,
+
   "author": "Riley Walsh",
   "license": "ISC",
   "description": "",
