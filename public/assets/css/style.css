@@ -18,6 +18,9 @@ nav,
     display: none;
 }
 
+nav{
+    top: 30px;
+}
 #main_content_area {
     background-color: #f7f8fc;
 }
@@ -89,7 +92,15 @@ nav,
     font-weight: bold;
 }
 
-/* -------------------------------- Media Query -------------------------------- */
+/* -------------------------------- Desktop Area -------------------------------- */
+/* Todos
+        - Rework spacing to match figma
+        - finish bottom card to match figma - add links, etc.
+        -rework the graph to better resemble the figma graph
+
+
+
+*/
 @media only screen and (min-width: 650px) {
     /* Sidebar */
     #Sidebar {
