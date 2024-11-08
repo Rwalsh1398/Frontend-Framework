@@ -1,6 +1,17 @@
 
 
 /* Note the Mobile Layout needs a lot of work - currently the desktop has been focused on */
+/* Areas which need work
+    -burger menu
+    -nav 
+    -sidebar (cant switch pages, as not mobile side-bar is implemented. Currently hidden)
+    -graph (currently does not display well, so is hidden)
+    -
+
+
+
+
+*/
 /* -------------------------------- Global Styles -------------------------------- */
 nav,
 #Sidebar {
