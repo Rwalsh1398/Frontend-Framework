@@ -1,5 +1,3 @@
-
-
 /* Note the Mobile Layout needs a lot of work - currently the desktop has been focused on */
 /* Areas which need work
     -burger menu
@@ -13,83 +11,103 @@
 
 */
 /* -------------------------------- Global Styles -------------------------------- */
+
 nav,
 #Sidebar {
-    display: none;
+  display: none;
 }
 
-nav{
-    top: 30px;
+#Sidebar a {
+  text-decoration: none;
+  color: #a4a6b3;
+}
+
+#Sidebar hr {
+  color: #dfe0eb;
+}
+
+.selected {
+  background: rgba(159, 162, 180, 0.08);
+  border-left: 3px solid #dde2ff;
+}
+
+.selected span,
+.selected i {
+  color: #dde2ff !important;
+}
+
+nav {
+  top: 30px;
 }
 #main_content_area {
-    background-color: #f7f8fc;
+  background-color: #f7f8fc;
 }
 
 /* -------------------------------- Cards Styles -------------------------------- */
 #Cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
 }
 
 .Cards_area .card-title {
-    /* Change to percentages? */
-    font-size: 0.9rem;
-    font-weight: bold;
+  /* Change to percentages? */
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .Cards_area .card-text {
-    /* Change to percentages? */
-    font-size: 1.8rem; 
-    color: #555;
+  /* Change to percentages? */
+  font-size: 1.8rem;
+  color: #555;
 }
 
 .Cards_area .card {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .Cards_area .card:hover .card-title,
 .Cards_area .card:hover .card-text {
-    color: #007bff;
+  color: #007bff;
 }
 
 .buttom_cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2%;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2%;
+  justify-content: center;
 }
 
 /* -------------------------------- Chart Styles -------------------------------- */
 .chart-container {
-    width: 50%;
-    height: 50%;
-    margin: auto;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
 
 .custom-padding {
-    padding: 20px;
+  padding: 20px;
 }
 
 #graph {
-    display: none;
+  display: none;
 }
 
 /* -------------------------------- Tickets Styles -------------------------------- */
 #bottom_cards {
-    gap: 6%;
-    padding: 5%;
+  gap: 6%;
+  padding: 5%;
 }
 
 #bottom_tickets {
-    gap: 12%;
+  gap: 12%;
 }
 
 .list-group-item {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* --------------------------------------------------------------------- Desktop Area ------------------------------------------------------------- */
@@ -102,52 +120,46 @@ nav{
 
 */
 @media only screen and (min-width: 650px) {
-    /* Sidebar */
-    #Sidebar {
-        display: flex;
-        height: 120vh;
-        background-color: #363740;
-    }
+  /* Sidebar */
+  #Sidebar {
+    display: flex;
+    background-color: #363740;
+    max-width: 255px;
+    min-height: 100vh;
+  }
 
-    /* top Nav */
-    #username{
-        font-size: small;
-        color: #363740;
-    }
+  /* top Nav */
+  #username {
+    font-size: small;
+    color: #363740;
+  }
 
-    #Top_right_Nav{
-        /* This gap is shrinking the svg, will need to figure out away around this, or fix the svg search icon size */
-        /* gap: 1.5%; */
-    }
+  #Top_right_Nav {
+    /* This gap is shrinking the svg, will need to figure out away around this, or fix the svg search icon size */
+    /* gap: 1.5%; */
+  }
 
-    /* Cards */
-    #Cards {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 2%;
-    }
+  /* Cards */
+  #Cards {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 2%;
+  }
 
-    /* Graph */
-    #graph {
-        height: 40%;
-        display: flex;
-    }
+  /* Graph */
+  #graph {
+    height: 40%;
+    display: flex;
+  }
 
-    /* Tickets */
-    #bottom_cards {
-        gap: 0%;
-        padding: 0%;
-    }
+  /* Tickets */
+  #bottom_cards {
+    gap: 0%;
+    padding: 0%;
+  }
 
-    #bottom_tickets {
-        padding: 2%;
-        gap: 0;
-    }
-
-    /* Lower Sidebar */
-    #low_sidebar {
-        /* attempted mimicing the sepration line, as per the figma examples. So far not working well.  */
-        border-top: white 2px solid;
-        width: 500px;
-    }
+  #bottom_tickets {
+    padding: 2%;
+    gap: 0;
+  }
 }

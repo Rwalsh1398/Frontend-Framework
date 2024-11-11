@@ -1,245 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview - INM320 Frontend Framework</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Overview - INM320 Frontend Framework</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/style.css"/>
-</head>
-<!-- Note the Code will have to be updated / precomplied. Have not done that, will have to review lectures to remember the process -->
-<!-- Also a majority of the classes, and ids were pulled directly from bootsrap code, as such may be confusing -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/04941ac3de.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- Note the Code will have to be updated / precomplied. Have not done that, will have to review lectures to remember the process -->
+  <!-- Also a majority of the classes, and ids were pulled directly from bootsrap code, as such may be confusing -->
 
-<body>
-  <!-- Sidebar -->
-   <!-- Will need to adjust the coloumns / row sizing -->
-  <div class="container-fluid">
-    <div class="row flex-nowrap">
-      <div id="Sidebar" class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+  <body>
+    <!-- Sidebar -->
+    <div class="container-fluid g-0">
+      <div class="row g-0">
+        <div id="Sidebar" class="col-4 col-md-3 g-0">
+          <div class="container-fluid g-0">
+            <div class="row g-0 pt-2 pb-4">
+              <a
+                href="index.html"
+                class="col d-flex gap-3 py-4 align-items-center ps-4"
+              >
+                <img src="./assets/images/logo.png" alt="Dashboard logo" />
+                <strong class="fs-5 d-none d-sm-inline">Dashboard kit</strong>
+              </a>
+            </div>
 
-          <a href="index.html" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-            <span class="fs-5 d-none d-sm-inline">Dashboard kit</span>
-          </a>
-
-          <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link align-middle px-0">
-                <i class="fs-4 bi-house"></i> 
-                <span class="ms-1 d-none d-sm-inline">Overview</span>
-              </a>
-            </li>
-            <li>
-              <a href="tickets.html" class="nav-link align-middle px-0">
-                <i class="fs-4 bi-speedometer2"></i> 
-                <span class="ms-1 d-none d-sm-inline">Tickets</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-table"></i> 
-                <span class="ms-1 d-none d-sm-inline">Contacts</span>
-              </a>
-            </li>
-            <li>
-              <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-bootstrap"></i> 
-                <span class="ms-1 d-none d-sm-inline">Agents</span>
-              </a>
-              <ul class="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                <li class="w-100">
-                  <a href="#" class="nav-link px-0"> 
-                    <span class="d-none d-sm-inline">Articles</span> 1
+            <div class="row g-0">
+              <ul
+                class="nav nav-pills flex-column mb-0 align-items-center align-items-sm-start"
+                id="menu"
+              >
+                <li class="nav-item selected container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-chart-pie col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Overview</span>
                   </a>
                 </li>
-                <li>
-                  <a href="#" class="nav-link px-0"> 
-                    <span class="d-none d-sm-inline">Settings</span> 2
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="tickets.html" class="row g-0">
+                    <i
+                      class="fa-solid fa-ticket col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Tickets</span>
+                  </a>
+                </li>
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-lightbulb col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Ideas</span>
+                  </a>
+                </li>
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-users col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Contacts</span>
+                  </a>
+                </li>
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-user-tie col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Agents</span>
+                  </a>
+                </li>
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-book col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Articles</span>
                   </a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-grid"></i> 
-                <span class="ms-1 d-none d-sm-inline">Articles</span>
-              </a>
-              <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
-                <li class="w-100"></li>
+            </div>
+
+            <hr />
+
+            <div class="row g-0">
+              <ul
+                id="low_sidebar"
+                class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+              >
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-gear col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Settings</span>
+                  </a>
+                </li>
+                <li class="nav-item nav-item container-fluid g-0 py-3">
+                  <a href="#" class="row g-0">
+                    <i
+                      class="fa-solid fa-award col-3 d-flex align-items-center justify-content-center"
+                    ></i>
+                    <span class="col">Subscription</span>
+                  </a>
+                </li>
               </ul>
-            </li>
-          </ul>
-
-          <ul id="low_sidebar" class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
-            <li class="mt-3">
-              <a href="#" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-people"></i> 
-                <span class="ms-1 d-none d-sm-inline">Settings</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link px-0 align-middle">
-                <i class="fs-4 bi-people"></i> 
-                <span class="ms-1 d-none d-sm-inline">Subscription</span>
-              </a>
-            </li>
-          </ul>
-          
-          <hr>
-        </div>
-      </div>
-
-      <div id="main_content_area" class="col py-3">
-        
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">Overview</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-
-              <!-- Profile Pic -->
-               
-              <a href="#" id="Top_right_Nav" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                <!-- Search Icon with margin to the right -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search me-2" viewBox="0 0 16 16" onclick="toggleSearch()">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-            
-                <!-- Search Form, initially hidden -->
-                <form id="searchForm" class="form-inline" style="display: none;">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                </form>
-                
-                <!-- Username with margin to the right -->
-                <span id="username" class="d-none d-sm-inline mx-1">Jones Ferdinand</span>
-                
-                <!-- Profile Picture with margin to the left -->
-                <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle ms-2">
-            </a>
-            </div>
-          </div>
-        </nav>
-
-        <!-- Top Informational / Task Cards Section -->
-        <div id="Cards" class="Cards_area d-flex flex-wrap gap-3">
-          <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Unresolved</h5>
-              <p class="card-text">61</p>
-            </div>
-          </div>
-          <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Overdue</h5>
-              <p class="card-text">16</p>
-            </div>
-          </div>
-          <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">Open</h5>
-              <p class="card-text">43</p>
-            </div>
-          </div>
-          <div class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title">On Hold</h5>
-              <p class="card-text">43</p>
             </div>
           </div>
         </div>
 
-        <!-- Graphs -->
-        <div id="graph" class="card chart-container">
-          <div class="p-3"> 
-            <canvas id="chart"></canvas>
-          </div>
-        </div>  
+        <div id="main_content_area" class="col g-0">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Overview</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
-        <!-- Bottom Forms -->
-        <div id="bottom_cards" class="container">
-          <div id="bottom_tickets" class="row">
-            <div class="col-md-6">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Unresolved Tickets
-                  <small class="d-block text-muted">Group: Support</small>
-                </li>
-                <li class="list-group-item">Waiting on Future Report</li>
-                <li class="list-group-item">Awaiting Customer Response</li>
-                <li class="list-group-item">Awaiting Developer Fix</li>
-                <li class="list-group-item">Pending</li>
-              </ul>
+                <!-- Profile Pic -->
+
+                <a
+                  href="#"
+                  id="Top_right_Nav"
+                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                  id="dropdownUser1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <!-- Search Icon with margin to the right -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="black"
+                    class="bi bi-search me-2"
+                    viewBox="0 0 16 16"
+                    onclick="toggleSearch()"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+
+                  <!-- Search Form, initially hidden -->
+                  <form
+                    id="searchForm"
+                    class="form-inline"
+                    style="display: none"
+                  >
+                    <input
+                      class="form-control mr-sm-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </form>
+
+                  <!-- Username with margin to the right -->
+                  <span id="username" class="d-none d-sm-inline mx-1"
+                    >Jones Ferdinand</span
+                  >
+
+                  <!-- Profile Picture with margin to the left -->
+                  <img
+                    src="https://github.com/mdo.png"
+                    alt="hugenerd"
+                    width="30"
+                    height="30"
+                    class="rounded-circle ms-2"
+                  />
+                </a>
+              </div>
             </div>
-            <div class="col-md-6">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  Tasks
-                  <small class="d-block text-muted">Today</small>
-                </li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul>
+          </nav>
+
+          <!-- Top Informational / Task Cards Section -->
+          <div id="Cards" class="Cards_area d-flex flex-wrap gap-3">
+            <div class="card text-center" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Unresolved</h5>
+                <p class="card-text">61</p>
+              </div>
+            </div>
+            <div class="card text-center" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Overdue</h5>
+                <p class="card-text">16</p>
+              </div>
+            </div>
+            <div class="card text-center" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">Open</h5>
+                <p class="card-text">43</p>
+              </div>
+            </div>
+            <div class="card text-center" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title">On Hold</h5>
+                <p class="card-text">43</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graphs -->
+          <div id="graph" class="card chart-container">
+            <div class="p-3">
+              <canvas id="chart"></canvas>
+            </div>
+          </div>
+
+          <!-- Bottom Forms -->
+          <div id="bottom_cards" class="container">
+            <div id="bottom_tickets" class="row">
+              <div class="col-md-6">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    Unresolved Tickets
+                    <small class="d-block text-muted">Group: Support</small>
+                  </li>
+                  <li class="list-group-item">Waiting on Future Report</li>
+                  <li class="list-group-item">Awaiting Customer Response</li>
+                  <li class="list-group-item">Awaiting Developer Fix</li>
+                  <li class="list-group-item">Pending</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    Tasks
+                    <small class="d-block text-muted">Today</small>
+                  </li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Morbi leo risus</li>
+                  <li class="list-group-item">Porta ac consectetur ac</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- End of Sidebar & Main Content - currently a grouped within the same div, as per the bootsrap code used. -->
+    <!-- End of Sidebar & Main Content - currently a grouped within the same div, as per the bootsrap code used. -->
 
-  <!--------------------------------------------------- Bootstrap and custom JavaScript--------------------------------------------------------- -->
-  <!-- Note the script inputs only are functional when added directly into the html -->
-  <!-- I have tried to check / proof-read the code with gpt, but it is absolutely no help -->
-  <!-- The issue could be a bootstrap specfic issue, or there is an small code error which I have yet to find -->
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/code.js"></script>
+    <!--------------------------------------------------- Bootstrap and custom JavaScript--------------------------------------------------------- -->
+    <!-- Note the script inputs only are functional when added directly into the html -->
+    <!-- I have tried to check / proof-read the code with gpt, but it is absolutely no help -->
+    <!-- The issue could be a bootstrap specfic issue, or there is an small code error which I have yet to find -->
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/code.js"></script>
 
-  <!-- Searchbar Java, Also only works when input directly into html - I cannot figure out why -->
-  <!-- <script src="../public/assets/js/chart.js" defer></script> this was an attempt to fix the issue. didnt work  --> 
+    <!-- Searchbar Java, Also only works when input directly into html - I cannot figure out why -->
+    <!-- <script src="../public/assets/js/chart.js" defer></script> this was an attempt to fix the issue. didnt work  -->
 
-
-  <script>
-    function toggleSearch() {
+    <script>
+      function toggleSearch() {
         const searchForm = document.getElementById("searchForm");
-        if (searchForm.style.display === "none" || searchForm.style.display === "") {
-            searchForm.style.display = "block";
+        if (
+          searchForm.style.display === "none" ||
+          searchForm.style.display === ""
+        ) {
+          searchForm.style.display = "block";
         } else {
-            searchForm.style.display = "none";
-        }
-    }
-</script>
-  <!-- Only Currently Works when directly inserted directly into the index page, at the very bottom, will work on this as it should be functional via js file -->
-  <script> 
-    const ctx = document.getElementById("chart").getContext('2d');
-    const myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        datasets: [{
-          label: 'Last week',
-          backgroundColor: 'rgba(161, 198, 247, 1)',
-          borderColor: 'rgb(47, 128, 237)',
-          data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
-        }]
-      },
-      options: {
-        scales: {
-          y: { beginAtZero: true }
+          searchForm.style.display = "none";
         }
       }
-    });
-  </script>
-  
-</body>
+    </script>
+    <!-- Only Currently Works when directly inserted directly into the index page, at the very bottom, will work on this as it should be functional via js file -->
+    <script>
+      const ctx = document.getElementById("chart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+          datasets: [
+            {
+              label: "Last week",
+              backgroundColor: "rgba(161, 198, 247, 1)",
+              borderColor: "rgb(47, 128, 237)",
+              data: [3000, 4000, 2000, 5000, 8000, 9000, 2000],
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true },
+          },
+        },
+      });
+    </script>
+  </body>
 </html>
