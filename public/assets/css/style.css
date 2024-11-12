@@ -12,7 +12,6 @@
 */
 /* -------------------------------- Global Styles -------------------------------- */
 
-nav,
 #Sidebar {
   display: none;
 }
@@ -36,75 +35,46 @@ nav,
   color: #dde2ff !important;
 }
 
-nav {
-  top: 30px;
-}
 #main_content_area {
   background-color: #f7f8fc;
 }
 
+header i {
+  color: #c5c7cd;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 26px;
+  background-color: #dfe0eb;
+}
+
 /* -------------------------------- Cards Styles -------------------------------- */
-#Cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5%;
+div.card {
+  min-width: 160px;
 }
 
-.Cards_area .card-title {
-  /* Change to percentages? */
-  font-size: 0.9rem;
-  font-weight: bold;
+.card-hover,
+.card-hover .card-title {
+  transition: all 0.3s ease;
 }
 
-.Cards_area .card-text {
-  /* Change to percentages? */
-  font-size: 1.8rem;
-  color: #555;
+.card-hover:hover {
+  cursor: pointer;
+  border: 1px solid #3751ff;
+  color: #3751ff;
 }
 
-.Cards_area .card {
-  transition: color 0.3s ease;
-}
-
-.Cards_area .card:hover .card-title,
-.Cards_area .card:hover .card-text {
-  color: #007bff;
-}
-
-.buttom_cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 2%;
-  justify-content: center;
+.card-hover:hover .card-title {
+  color: #3751ff !important;
 }
 
 /* -------------------------------- Chart Styles -------------------------------- */
-.chart-container {
-  width: 50%;
-  height: 50%;
-  margin: auto;
-}
-
 .custom-padding {
   padding: 20px;
 }
 
-#graph {
-  display: none;
-}
-
 /* -------------------------------- Tickets Styles -------------------------------- */
-#bottom_cards {
-  gap: 6%;
-  padding: 5%;
-}
-
-#bottom_tickets {
-  gap: 12%;
-}
 
 .list-group-item {
   font-weight: bold;
@@ -134,28 +104,11 @@ nav {
     color: #363740;
   }
 
-  #Top_right_Nav {
-    /* This gap is shrinking the svg, will need to figure out away around this, or fix the svg search icon size */
-    /* gap: 1.5%; */
-  }
-
   /* Cards */
   #Cards {
     flex-direction: row;
     align-items: flex-start;
     padding: 2%;
-  }
-
-  /* Graph */
-  #graph {
-    height: 40%;
-    display: flex;
-  }
-
-  /* Tickets */
-  #bottom_cards {
-    gap: 0%;
-    padding: 0%;
   }
 
   #bottom_tickets {

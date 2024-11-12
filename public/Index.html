@@ -120,142 +120,264 @@
           </div>
         </div>
 
-        <div id="main_content_area" class="col g-0">
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Overview</a>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+        <div id="main_content_area" class="col g-0 p-4">
+          <!-- Header -->
+          <header
+            class="d-flex align-items-center justify-content-between w-100"
+          >
+            <a class="text-decoration-none fs-3 fw-semibold text-dark" href="#"
+              >Overview</a
+            >
+            <div class="d-flex gap-3 align-items-center">
+              <i class="fa-solid fa-magnifying-glass ms-auto"></i>
+              <i class="fa-solid fa-bell"></i>
 
-                <!-- Profile Pic -->
+              <!-- Divider to split the icons from the name and profile pic -->
+              <div class="vertical-divider"></div>
 
-                <a
-                  href="#"
-                  id="Top_right_Nav"
-                  class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                  id="dropdownUser1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <!-- Search Icon with margin to the right -->
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="black"
-                    class="bi bi-search me-2"
-                    viewBox="0 0 16 16"
-                    onclick="toggleSearch()"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                    />
-                  </svg>
+              <!-- Username with margin to the right -->
+              <span id="username">Jones Ferdinand</span>
 
-                  <!-- Search Form, initially hidden -->
-                  <form
-                    id="searchForm"
-                    class="form-inline"
-                    style="display: none"
-                  >
-                    <input
-                      class="form-control mr-sm-2"
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                    />
-                  </form>
-
-                  <!-- Username with margin to the right -->
-                  <span id="username" class="d-none d-sm-inline mx-1"
-                    >Jones Ferdinand</span
-                  >
-
-                  <!-- Profile Picture with margin to the left -->
-                  <img
-                    src="https://github.com/mdo.png"
-                    alt="hugenerd"
-                    width="30"
-                    height="30"
-                    class="rounded-circle ms-2"
-                  />
-                </a>
-              </div>
+              <!-- Profile Picture with margin to the left -->
+              <img
+                src="https://github.com/mdo.png"
+                alt="hugenerd"
+                width="30"
+                height="30"
+                class="rounded-circle"
+              />
             </div>
-          </nav>
+          </header>
 
           <!-- Top Informational / Task Cards Section -->
-          <div id="Cards" class="Cards_area d-flex flex-wrap gap-3">
-            <div class="card text-center" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">Unresolved</h5>
-                <p class="card-text">61</p>
+          <div class="container-fluid mt-5">
+            <div class="row gap-4">
+              <div class="col card text-center card-hover">
+                <div class="card-body">
+                  <h6 class="card-title text-body-tertiary">Unresolved</h6>
+                  <h2 class="card-text">61</h2>
+                </div>
               </div>
-            </div>
-            <div class="card text-center" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">Overdue</h5>
-                <p class="card-text">16</p>
+              <div class="col card text-center card-hover">
+                <div class="card-body">
+                  <h6 class="card-title text-body-tertiary">Overdue</h6>
+                  <h2 class="card-text">16</h2>
+                </div>
               </div>
-            </div>
-            <div class="card text-center" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">Open</h5>
-                <p class="card-text">43</p>
+              <div class="col card text-center card-hover">
+                <div class="card-body">
+                  <h6 class="card-title text-body-tertiary">Open</h6>
+                  <h2 class="card-text">43</h2>
+                </div>
               </div>
-            </div>
-            <div class="card text-center" style="width: 18rem">
-              <div class="card-body">
-                <h5 class="card-title">On Hold</h5>
-                <p class="card-text">43</p>
+              <div class="col card text-center card-hover">
+                <div class="card-body">
+                  <h6 class="card-title text-body-tertiary">On Hold</h6>
+                  <h2 class="card-text">43</h2>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Graphs -->
-          <div id="graph" class="card chart-container">
-            <div class="p-3">
-              <canvas id="chart"></canvas>
+          <div id="graph" class="card mt-4">
+            <div class="row g-0">
+              <div class="col-8 h-100">
+                <canvas id="chart"></canvas>
+              </div>
+              <div class="col-4 border-start rounded-end">
+                <ul class="list-group list-group-flush h-100 rounded-end">
+                  <li
+                    class="list-group-item flex-grow-1 d-flex flex-column justify-content-center"
+                  >
+                    <h6 class="card-title text-body-tertiary text-center">
+                      Resolved
+                    </h6>
+                    <h2 class="card-text text-center">449</h2>
+                  </li>
+                  <li
+                    class="list-group-item flex-grow-1 d-flex flex-column justify-content-center"
+                  >
+                    <h6 class="card-title text-body-tertiary text-center">
+                      Received
+                    </h6>
+                    <h2 class="card-text text-center">426</h2>
+                  </li>
+                  <li
+                    class="list-group-item flex-grow-1 d-flex flex-column justify-content-center"
+                  >
+                    <h6 class="card-title text-body-tertiary text-center">
+                      Average first response time
+                    </h6>
+                    <h2 class="card-text text-center">33m</h2>
+                  </li>
+                  <li
+                    class="list-group-item flex-grow-1 d-flex flex-column justify-content-center"
+                  >
+                    <h6 class="card-title text-body-tertiary text-center">
+                      Average response time
+                    </h6>
+                    <h2 class="card-text text-center">3h 8m</h2>
+                  </li>
+                  <li
+                    class="list-group-item flex-grow-1 d-flex flex-column justify-content-center"
+                  >
+                    <h6 class="card-title text-body-tertiary text-center">
+                      Resolution within SLA
+                    </h6>
+                    <h2 class="card-text text-center">94%</h2>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <!-- Bottom Forms -->
-          <div id="bottom_cards" class="container">
-            <div id="bottom_tickets" class="row">
-              <div class="col-md-6">
-                <ul class="list-group">
+          <div class="container-fluid g-0 mt-4">
+            <div class="row g-0 gap-4">
+              <!-- First big card -->
+              <div class="col card g-0">
+                <div class="card-body pb-0">
+                  <div
+                    class="w-100 d-flex align-items-center justify-content-between"
+                  >
+                    <h4>Unresolved Tickets</h4>
+                    <a href="#" class="text-decoration-none">View details</a>
+                  </div>
+                  <small class="text-secondary w-100">
+                    Group:
+                    <strong class="fw-semibold text-secondary-emphasis"
+                      >Support</strong
+                    >
+                  </small>
+                  <div
+                    class="d-flex align-items-center justify-content-between mt-5 pb-2"
+                  >
+                    <p class="m-0 fw-semibold">Waiting on Feature Request</p>
+                    <span class="text-secondary">4238</span>
+                  </div>
+                </div>
+                <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    Unresolved Tickets
-                    <small class="d-block text-muted">Group: Support</small>
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="m-0 fw-semibold">Awaiting Customer Response</p>
+                      <span class="text-secondary fw-normal">1005</span>
+                    </div>
                   </li>
-                  <li class="list-group-item">Waiting on Future Report</li>
-                  <li class="list-group-item">Awaiting Customer Response</li>
-                  <li class="list-group-item">Awaiting Developer Fix</li>
-                  <li class="list-group-item">Pending</li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="m-0 fw-semibold">Awaiting Developer Fix</p>
+                      <span class="text-secondary fw-normal">914</span>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <p class="m-0 fw-semibold">Pending</p>
+                      <span class="text-secondary fw-normal">281</span>
+                    </div>
+                  </li>
                 </ul>
               </div>
-              <div class="col-md-6">
-                <ul class="list-group">
+
+              <!-- Second big card -->
+              <div class="col card g-0">
+                <div class="card-body pb-0">
+                  <div
+                    class="w-100 d-flex align-items-center justify-content-between"
+                  >
+                    <h4>Tasks</h4>
+                    <a href="#" class="text-decoration-none">View all</a>
+                  </div>
+                  <small class="text-secondary w-100"> Today </small>
+                  <div
+                    class="d-flex align-items-center justify-content-between mt-5 pb-2"
+                  >
+                    <p class="m-0 fw-semibold text-body-tertiary">
+                      Create new task
+                    </p>
+                    <span class="text-secondary badge text-bg-light">
+                      <i class="fa-solid fa-plus"></i>
+                    </span>
+                  </div>
+                </div>
+                <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    Tasks
-                    <small class="d-block text-muted">Today</small>
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div class="form-check form-check-inline">
+                        <input
+                          type="radio"
+                          name="tasks"
+                          id="finish-ticket-update"
+                          value="finish-ticket-update"
+                          class="form-check-input"
+                        />
+                        <label
+                          for="finish-ticket-update"
+                          class="m-0 fw-semibold form-check-label"
+                          >Finish ticket update</label
+                        >
+                      </div>
+                      <span class="text-white fw-semibold badge text-bg-warning"
+                        >URGENT</span
+                      >
+                    </div>
                   </li>
-                  <li class="list-group-item">Dapibus ac facilisis in</li>
-                  <li class="list-group-item">Morbi leo risus</li>
-                  <li class="list-group-item">Porta ac consectetur ac</li>
-                  <li class="list-group-item">Vestibulum at eros</li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div class="form-check form-check-inline">
+                        <input
+                          type="radio"
+                          name="tasks"
+                          id="create-new-example"
+                          value="create-new-example"
+                          class="form-check-input"
+                        />
+                        <label
+                          for="create-new-example"
+                          class="m-0 fw-semibold form-check-label"
+                          >Create new ticket example</label
+                        >
+                      </div>
+                      <span class="text-white fw-semibold badge text-bg-success"
+                        >NEW</span
+                      >
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div class="form-check form-check-inline">
+                        <input
+                          type="radio"
+                          name="tasks"
+                          id="update-ticket-report"
+                          value="update-ticket-report"
+                          class="form-check-input"
+                          checked
+                        />
+                        <label
+                          for="update-ticket-report"
+                          class="m-0 fw-semibold form-check-label"
+                          >Update ticket report</label
+                        >
+                      </div>
+                      <span
+                        class="fw-semibold badge text-bg-light text-secondary"
+                        >DEFAULT</span
+                      >
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
