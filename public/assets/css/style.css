@@ -1,28 +1,34 @@
-/* Note the Mobile Layout needs a lot of work - currently the desktop has been focused on */
-/* Areas which need work
-    -burger menu
-    -nav 
-    -sidebar (cant switch pages, as not mobile side-bar is implemented. Currently hidden)
-    -graph (currently does not display well, so is hidden)
-    -
-
-
-
-
+/* 
+  I focused heavily on using bootstrap classes and to rely too much on customized classes 
+  But some things still need to be customized, so I left some of these classes
 */
+
 /* -------------------------------- Global Styles -------------------------------- */
 
-#Sidebar {
-  display: none;
+.sidebar-container {
+  background-color: #363740;
 }
 
-#Sidebar a {
+#sidebar {
+  background-color: #363740;
+  width: 255px;
+  min-height: 100vh;
+}
+
+#sidebar a {
   text-decoration: none;
   color: #a4a6b3;
 }
 
-#Sidebar hr {
+#sidebar hr {
   color: #dfe0eb;
+}
+
+.menu-button {
+  background-color: #363740;
+}
+.menu-button:hover i {
+  color: #363740 !important;
 }
 
 .selected {
@@ -37,6 +43,8 @@
 
 #main_content_area {
   background-color: #f7f8fc;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header i {
@@ -69,50 +77,21 @@ div.card {
   color: #3751ff !important;
 }
 
-/* -------------------------------- Chart Styles -------------------------------- */
-.custom-padding {
-  padding: 20px;
-}
-
 /* -------------------------------- Tickets Styles -------------------------------- */
 
 .list-group-item {
   font-weight: bold;
 }
 
-/* --------------------------------------------------------------------- Desktop Area ------------------------------------------------------------- */
-/* Todos
-        - Rework spacing to match figma
-        - finish bottom card to match figma - add links, etc.
-        -rework the graph to better resemble the figma graph
-
-
-
-*/
-@media only screen and (min-width: 650px) {
-  /* Sidebar */
-  #Sidebar {
-    display: flex;
-    background-color: #363740;
-    max-width: 255px;
-    min-height: 100vh;
+/* I choose 768px as a breakpoint to match the `md` breakpoint measure used by bootstrap */
+@media only screen and (min-width: 768px) {
+  .sidebar-container {
+    width: 255px;
   }
 
   /* top Nav */
   #username {
     font-size: small;
     color: #363740;
-  }
-
-  /* Cards */
-  #Cards {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 2%;
-  }
-
-  #bottom_tickets {
-    padding: 2%;
-    gap: 0;
   }
 }
