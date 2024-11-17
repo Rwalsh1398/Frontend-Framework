@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Overview - INM320 Frontend Framework</title>
 
+    <!-- One of the bootstrap elements we need to make the classes work  -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- Our custom CSS to cover things we couldn't achieve through bootstrap, like personalized colors and sizes -->
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Below is the script to use font awesome icons -->
     <script
       src="https://kit.fontawesome.com/04941ac3de.js"
       crossorigin="anonymous"
@@ -23,6 +26,8 @@
   <body>
     <!-- Sidebar -->
     <div class="container-fluid g-0">
+      <!-- This is the burger menu button, and it will be hidden on md breakpoint and higher, due to d-md-none class. -->
+      <!-- Also we chose the offcanvas component to add the feature of opening/closing the menu in the left side with some animation -->
       <button
         class="menu-button btn mt-4 ms-4 d-md-none"
         data-bs-toggle="offcanvas"
@@ -33,11 +38,14 @@
       </button>
       <div class="row g-0">
         <div class="col-md-3 g-0 sidebar-container">
+          <!-- I added the offcanvas classes in here to add the animation and effets of open/close -->
+          <!-- Also we added vertical overflow auto, to be able to scroll down the options of the menu when in a small screen  -->
           <div
             class="container-fluid g-0 offcanvas-start offcanvas-md overflow-y-auto"
             tabindex="-1"
             id="sidebar"
           >
+            <!-- The title and logo of the website -->
             <div class="row g-0 pt-2 pb-4">
               <a
                 href="index.html"
@@ -132,6 +140,7 @@
           </div>
         </div>
 
+        <!-- This is where the main content of tha page will sit -->
         <div id="main_content_area" class="col g-0 p-4">
           <!-- Header -->
           <header
@@ -194,10 +203,14 @@
           <!-- Graphs -->
           <div id="graph" class="card mt-4">
             <div class="row g-0">
+              <!-- This first div is entirely for the chart. -->
               <div class="col-11 col-xl-8 mx-auto p-3">
                 <canvas id="chart"></canvas>
               </div>
+              <!-- This second div is for the rest of the info cards that sits aside the chart in a big screen.
+              In smaller screens, this part goes downwards and it gets spread in horizontal instead of vertical -->
               <div class="col col-xl-4 border-start rounded-end">
+                <!-- In the ul is where the transition from horizontal to vertical happen, using the flex row/column with the xl breakpoint -->
                 <ul
                   class="list-group list-group-flush h-100 rounded-end flex-row flex-xl-column flex-wrap mt-4 mt-xl-0 pb-4 pb-xl-0"
                 >
@@ -399,13 +412,8 @@
         </div>
       </div>
     </div>
-    <!-- End of Sidebar & Main Content - currently a grouped within the same div, as per the bootsrap code used. -->
 
     <!--------------------------------------------------- Bootstrap and custom JavaScript--------------------------------------------------------- -->
-    <!-- Note the script inputs only are functional when added directly into the html -->
-    <!-- I have tried to check / proof-read the code with gpt, but it is absolutely no help -->
-    <!-- The issue could be a bootstrap specfic issue, or there is an small code error which I have yet to find -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -414,22 +422,5 @@
     <script src="/assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/code.js"></script>
-
-    <!-- Searchbar Java, Also only works when input directly into html - I cannot figure out why -->
-    <!-- <script src="../public/assets/js/chart.js" defer></script> this was an attempt to fix the issue. didnt work  -->
-
-    <script>
-      function toggleSearch() {
-        const searchForm = document.getElementById("searchForm");
-        if (
-          searchForm.style.display === "none" ||
-          searchForm.style.display === ""
-        ) {
-          searchForm.style.display = "block";
-        } else {
-          searchForm.style.display = "none";
-        }
-      }
-    </script>
   </body>
 </html>

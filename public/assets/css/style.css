@@ -1,9 +1,9 @@
 /* 
-  I focused heavily on using bootstrap classes and to rely too much on customized classes 
+  I focused heavily on using bootstrap classes and not rely too much on customized classes 
   But some things still need to be customized, so I left some of these classes
 */
 
-/* -------------------------------- Global Styles -------------------------------- */
+/* -------------------------------- Sidebar -------------------------------- */
 
 .sidebar-container {
   background-color: #363740;
@@ -40,6 +40,8 @@
 .selected i {
   color: #dde2ff !important;
 }
+
+/* ------------------------------Body of the page----------------------------- */
 
 #main_content_area {
   background-color: #f7f8fc;
@@ -83,7 +85,9 @@ div.card {
   font-weight: bold;
 }
 
-/* I choose 768px as a breakpoint to match the `md` breakpoint measure used by bootstrap */
+/* I chose 768px as a breakpoint to match the `md` breakpoint measure used by bootstrap */
+/* I was able to work on the responsiveness in most of the page using Bootstrap */
+/* But I still needed to have the below css, because of custom values (like color and width) */
 @media only screen and (min-width: 768px) {
   .sidebar-container {
     width: 255px;
