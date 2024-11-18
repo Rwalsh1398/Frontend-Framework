@@ -22,6 +22,7 @@
 
   <body>
     <!-- Sidebar -->
+     <!-- General Side Bar settings -->
     <div class="container-fluid g-0">
       <button
         class="menu-button btn mt-4 ms-4 d-md-none"
@@ -53,6 +54,7 @@
                 class="nav nav-pills flex-column mb-0 align-items-center align-items-sm-start"
                 id="menu"
               >
+              <!-- Overview -->
                 <li class="nav-item selected container-fluid g-0 py-3">
                   <a href="#" class="row g-0">
                     <i
@@ -61,14 +63,16 @@
                     <span class="col">Overview</span>
                   </a>
                 </li>
+                <!-- Tickets -->
                 <li class="nav-item nav-item container-fluid g-0 py-3">
-                  <a href="tickets.html" class="row g-0">
+                  <a href="#" class="row g-0">
                     <i
                       class="fa-solid fa-ticket col-3 d-flex align-items-center justify-content-center"
                     ></i>
                     <span class="col">Tickets</span>
                   </a>
                 </li>
+                <!-- Ideas -->
                 <li class="nav-item nav-item container-fluid g-0 py-3">
                   <a href="#" class="row g-0">
                     <i
@@ -77,6 +81,7 @@
                     <span class="col">Ideas</span>
                   </a>
                 </li>
+                <!-- Contracts -->
                 <li class="nav-item nav-item container-fluid g-0 py-3">
                   <a href="#" class="row g-0">
                     <i
@@ -85,6 +90,7 @@
                     <span class="col">Contacts</span>
                   </a>
                 </li>
+                <!-- Agents -->
                 <li class="nav-item nav-item container-fluid g-0 py-3">
                   <a href="#" class="row g-0">
                     <i
@@ -93,6 +99,7 @@
                     <span class="col">Agents</span>
                   </a>
                 </li>
+                <!-- Articles -->
                 <li class="nav-item nav-item container-fluid g-0 py-3">
                   <a href="#" class="row g-0">
                     <i
@@ -141,8 +148,16 @@
               >Overview</a
             >
             <div class="d-flex gap-3 align-items-center">
-              <i class="fa-solid fa-magnifying-glass ms-auto"></i>
+             
+              <!-- Search  -->
+              <i id="toggleSearchButton" class="fa-solid fa-magnifying-glass ms-auto"></i>
               <i class="fa-solid fa-bell"></i>
+              
+              <!-- Search Form (hidden by default) -->
+              <div id="searchForm" style="display: none;">
+                <input type="text" class="form-control" placeholder="Search..." />
+              </div>
+              
 
               <!-- Divider to split the icons from the name and profile pic -->
               <div class="vertical-divider"></div>
@@ -402,9 +417,7 @@
     <!-- End of Sidebar & Main Content - currently a grouped within the same div, as per the bootsrap code used. -->
 
     <!--------------------------------------------------- Bootstrap and custom JavaScript--------------------------------------------------------- -->
-    <!-- Note the script inputs only are functional when added directly into the html -->
-    <!-- I have tried to check / proof-read the code with gpt, but it is absolutely no help -->
-    <!-- The issue could be a bootstrap specfic issue, or there is an small code error which I have yet to find -->
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -415,21 +428,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/code.js"></script>
 
-    <!-- Searchbar Java, Also only works when input directly into html - I cannot figure out why -->
-    <!-- <script src="../public/assets/js/chart.js" defer></script> this was an attempt to fix the issue. didnt work  -->
 
-    <script>
-      function toggleSearch() {
-        const searchForm = document.getElementById("searchForm");
-        if (
-          searchForm.style.display === "none" ||
-          searchForm.style.display === ""
-        ) {
-          searchForm.style.display = "block";
-        } else {
-          searchForm.style.display = "none";
-        }
-      }
-    </script>
+    
   </body>
 </html>

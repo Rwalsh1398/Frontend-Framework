@@ -1,8 +1,7 @@
-
-// file still not working
-document.addEventListener('DOMContentLoaded' , function() {
-const ctx = document.getElementById("chart").getContext('2d');
-const myChart = new Chart(ctx, {
+document.addEventListener('DOMContentLoaded', function () {
+  // Inits the chart
+  const ctx = document.getElementById("chart").getContext('2d');
+  const myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -21,15 +20,19 @@ const myChart = new Chart(ctx, {
         }
       }
     },
-  }) 
-});
+  });
 
-  // search
-  function toggleSearch() {
-    const searchForm = document.getElementById("searchForm");
-    if (searchForm.style.display === "none" || searchForm.style.display === "") {
+  // Search Toggle Functionality
+  const toggleSearchButton = document.getElementById("toggleSearchButton");
+  const searchForm = document.getElementById("searchForm");
+
+  if (toggleSearchButton) {
+    toggleSearchButton.addEventListener("click", function () {
+      if (searchForm.style.display === "none" || searchForm.style.display === "") {
         searchForm.style.display = "block";
-    } else {
+      } else {
         searchForm.style.display = "none";
-    }
-}
+      }
+    });
+  }
+});
