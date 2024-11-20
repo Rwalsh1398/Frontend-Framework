@@ -98,4 +98,17 @@ div.card {
     font-size: small;
     color: #363740;
   }
+
+  #chart_heading{
+    padding: 1% 0 0 1%;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  #chart_subheading{
+    padding: 0 0 0 1%;
+    font-size: 16px;
+    color:#a4a6b3
+  
+  }
 }
