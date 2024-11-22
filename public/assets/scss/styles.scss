@@ -1,3 +1,8 @@
+// I changed the font size 6 default bootstrap value here to match exactly like figma!
+$font-sizes: (
+  5: 19px,
+);
+
 // The below is necessary to load the bootstrap sass file
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
