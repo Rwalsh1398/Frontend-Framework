@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const ctx = document.getElementById("chart").getContext('2d');
   const myChart = new Chart(ctx, {
-    type: 'line', //figma example has a temporal chart - will try and convert from line into temporal.
+    type: 'line', 
     data: {
       //Manual Codding for the labels, from 0 to 22 -as per figma example
       labels: ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"],
