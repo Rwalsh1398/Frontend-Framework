@@ -3,8 +3,11 @@
   But some things still need to be customized, so I left some of these classes
 */
 
-/* -------------------------------- Sidebar -------------------------------- */
+body {
+  background-color: #f7f8fc;
+}
 
+/* -------------------------------- Sidebar -------------------------------- */
 .sidebar-container {
   background-color: #363740;
 }
@@ -44,7 +47,6 @@
 /* ------------------------------Body of the page----------------------------- */
 
 #main_content_area {
-  background-color: #f7f8fc;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -87,16 +89,16 @@ div.card {
 
 /* -------------------------------- Chart Styles -------------------------------- */
 
-#chart_heading{
+#chart_heading {
   padding: 2% 0 0 2%;
   font-size: 15px;
   font-weight: bold;
 }
 
-#chart_subheading{
+#chart_subheading {
   padding: 0 0 0 2%;
   font-size: 12px;
-  color:#a4a6b3
+  color: #a4a6b3;
 }
 
 /* I chose 768px as a breakpoint to match the `md` breakpoint measure used by bootstrap */
@@ -113,18 +115,16 @@ div.card {
     color: #363740;
   }
 
-  
-/* -------------------------------- Chart Styles -------------------------------- */
-  #chart_heading{
+  /* -------------------------------- Chart Styles -------------------------------- */
+  #chart_heading {
     padding: 1% 0 0 1%;
     font-size: 20px;
     font-weight: bold;
   }
 
-  #chart_subheading{
+  #chart_subheading {
     padding: 0 0 0 1%;
     font-size: 16px;
-    color:#a4a6b3
-  
+    color: #a4a6b3;
   }
 }

@@ -25,7 +25,7 @@
 
   <body>
     <!-- Sidebar -->
-     <!-- General Side Bar settings -->
+    <!-- General Side Bar settings -->
     <div class="container-fluid g-0">
       <!-- This is the burger menu button, and it will be hidden on md breakpoint and higher, due to d-md-none class. -->
       <!-- Also we chose the offcanvas component to add the feature of opening/closing the menu in the left side with some animation -->
@@ -37,7 +37,7 @@
       >
         <i class="fa-solid fa-bars text-white"></i>
       </button>
-      <div class="row g-0">
+      <div class="row g-0 flex-md-nowrap">
         <div class="col-md-3 g-0 sidebar-container">
           <!-- I added the offcanvas classes in here to add the animation and effets of open/close -->
           <!-- Also we added vertical overflow auto, to be able to scroll down the options of the menu when in a small screen  -->
@@ -62,7 +62,7 @@
                 class="nav nav-pills flex-column mb-0 align-items-center align-items-sm-start"
                 id="menu"
               >
-              <!-- Overview -->
+                <!-- Overview -->
                 <li class="nav-item selected container-fluid g-0 py-3">
                   <a href="#" class="row g-0">
                     <i
@@ -148,7 +148,7 @@
         </div>
 
         <!-- This is where the main content of tha page will sit -->
-        <div id="main_content_area" class="col-md-9 g-0 p-4">
+        <div id="main_content_area" class="g-0 p-4 col">
           <!-- Header -->
           <header
             class="d-flex align-items-center justify-content-between w-100"
@@ -157,16 +157,21 @@
               >Overview</a
             >
             <div class="d-flex gap-3 align-items-center">
-             
               <!-- Search  -->
-              <i id="toggleSearchButton" class="fa-solid fa-magnifying-glass ms-auto"></i>
+              <i
+                id="toggleSearchButton"
+                class="fa-solid fa-magnifying-glass ms-auto"
+              ></i>
               <i class="fa-solid fa-bell"></i>
-              
+
               <!-- Search Form (hidden by default) -->
-              <div id="searchForm" style="display: none;">
-                <input type="text" class="form-control" placeholder="Search..." />
+              <div id="searchForm" style="display: none">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search..."
+                />
               </div>
-              
 
               <!-- Divider to split the icons from the name and profile pic -->
               <div class="vertical-divider"></div>
@@ -216,12 +221,12 @@
           </div>
 
           <!-- Graphs -->
-          <div id="graph" class="card mt-4">
+          <div id="graph" class="card mt-4 container-fluid g-0">
             <div class="row g-0">
               <!-- This first div is entirely for the chart. -->
-               <h1 id="chart_heading">Todays Trend's</h1>
-               <h2 id="chart_subheading">As of 25 May 2019, 09:41 PM</h2>
               <div class="col-11 col-xl-8 mx-auto p-3">
+                <h1 id="chart_heading">Todays Trend's</h1>
+                <h2 id="chart_subheading">As of 25 May 2019, 09:41 PM</h2>
                 <canvas id="chart"></canvas>
               </div>
               <!-- This second div is for the rest of the info cards that sits aside the chart in a big screen.
