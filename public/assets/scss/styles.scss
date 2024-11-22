@@ -1,3 +1,4 @@
+// The below is necessary to load the bootstrap sass file
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 /* 
@@ -6,127 +7,130 @@
 */
 
 body {
-    background-color: #f7f8fc;
-  }
-  
-  /* -------------------------------- Sidebar -------------------------------- */
-  .sidebar-container {
-    background-color: #363740;
-  }
-  
-  #sidebar {
-    background-color: #363740;
+  background-color: #f7f8fc;
+}
+
+/* -------------------------------- Sidebar -------------------------------- */
+$sidebar-bg-color: #363740;
+
+.sidebar-container {
+  background-color: $sidebar-bg-color;
+
+  & > div {
     width: 255px;
     min-height: 100vh;
   }
-  
-  #sidebar a {
+
+  & a {
     text-decoration: none;
     color: #a4a6b3;
   }
-  
-  #sidebar hr {
+
+  & hr {
     color: #dfe0eb;
   }
-  
-  .menu-button {
-    background-color: #363740;
+}
+
+.menu-button {
+  background-color: $sidebar-bg-color;
+
+  &:hover i {
+    color: $sidebar-bg-color !important;
   }
-  .menu-button:hover i {
-    color: #363740 !important;
-  }
-  
-  .selected {
-    background: rgba(159, 162, 180, 0.08);
-    border-left: 3px solid #dde2ff;
-  }
-  
-  .selected span,
-  .selected i {
+}
+
+.selected {
+  background: rgba(159, 162, 180, 0.08);
+  border-left: 3px solid #dde2ff;
+
+  & span,
+  & i {
     color: #dde2ff !important;
   }
-  
-  /* ------------------------------Body of the page----------------------------- */
-  
-  #main_content_area {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  header i {
-    color: #c5c7cd;
-  }
-  
-  .vertical-divider {
-    width: 1px;
-    height: 26px;
-    background-color: #dfe0eb;
-  }
-  
-  /* -------------------------------- Cards Styles -------------------------------- */
-  div.card {
-    min-width: 160px;
-  }
-  
-  .card-hover,
-  .card-hover .card-title {
-    transition: all 0.3s ease;
-  }
-  
-  .card-hover:hover {
+}
+
+/* ------------------------------Body of the page----------------------------- */
+
+#main_content_area {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header i {
+  color: #c5c7cd;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 26px;
+  background-color: #dfe0eb;
+}
+
+/* -------------------------------- Cards Styles -------------------------------- */
+div.card {
+  min-width: 160px;
+}
+
+.card-hover,
+.card-hover .card-title {
+  transition: all 0.3s ease;
+}
+
+.card-hover {
+  &:hover {
     cursor: pointer;
     border: 1px solid #3751ff;
     color: #3751ff;
   }
-  
-  .card-hover:hover .card-title {
+
+  &:hover .card-title {
     color: #3751ff !important;
   }
-  
-  /* -------------------------------- Tickets Styles -------------------------------- */
-  
-  .list-group-item {
-    font-weight: bold;
+}
+
+/* -------------------------------- Tickets Styles -------------------------------- */
+
+.list-group-item {
+  font-weight: bold;
+}
+
+/* -------------------------------- Chart Styles -------------------------------- */
+
+#chart_heading {
+  padding: 2% 0 0 2%;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#chart_subheading {
+  padding: 0 0 0 2%;
+  font-size: 12px;
+  color: #a4a6b3;
+}
+
+/* I chose md as a breakpoint to match the `md` breakpoint measure used by bootstrap */
+/* I was able to work on the responsiveness in most of the page using Bootstrap */
+/* But I still needed to have the below css, because of custom values (like color and width) */
+// I was able to follow bootstrap documentation to use their variables!
+@include media-breakpoint-up(md) {
+  .sidebar-container {
+    width: 255px;
   }
-  
+
+  /* top Nav */
+  #username {
+    font-size: small;
+    color: $sidebar-bg-color;
+  }
+
   /* -------------------------------- Chart Styles -------------------------------- */
-  
   #chart_heading {
-    padding: 2% 0 0 2%;
-    font-size: 15px;
-    font-weight: bold;
+    padding: 1% 0 0 1%;
+    font-size: 20px;
   }
-  
+
   #chart_subheading {
-    padding: 0 0 0 2%;
-    font-size: 12px;
-    color: #a4a6b3;
+    padding: 0 0 0 1%;
+    font-size: 16px;
   }
-  
-  /* I chose 768px as a breakpoint to match the `md` breakpoint measure used by bootstrap */
-  /* I was able to work on the responsiveness in most of the page using Bootstrap */
-  /* But I still needed to have the below css, because of custom values (like color and width) */
-  @media only screen and (min-width: 768px) {
-    .sidebar-container {
-      width: 255px;
-    }
-  
-    /* top Nav */
-    #username {
-      font-size: small;
-      color: #363740;
-    }
-  
-    /* -------------------------------- Chart Styles -------------------------------- */
-    #chart_heading {
-      padding: 1% 0 0 1%;
-      font-size: 20px;
-      font-weight: bold;
-    }
-  
-    #chart_subheading {
-      padding: 0 0 0 1%;
-      font-size: 16px;
-      color: #a4a6b3;
-    }
-  }
+}
