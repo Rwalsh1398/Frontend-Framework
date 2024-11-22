@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server --baseDir=\"public\""
+    "start": "lite-server --baseDir=\"public\"",
+    "compile": "npx sass --quiet public/assets/scss:public/assets/css"
   },
   "keywords": [],
   "private": true,
@@ -11,6 +12,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "sass": "^1.81.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
